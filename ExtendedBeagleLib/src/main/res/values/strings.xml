@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">beagle-ui</string>
+
+    <string name="personal">Cá nhân</string>
+    <string name="forgot_password">Quên mật khẩu</string>
+    <string name="account_info">Thông tin tài khoản</string>
+
+    <string name="press_again_to_exit">Chạm lần nữa để thoát</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="copyright">Copyright by © TTPTPM - VTNet</string>
+
+    <string name="camera_granted">Camera permission granted</string>
+    <string name="camera_denied">Camera permission denied</string>
+
+    <string name="storage_granted">Access storage permission granted</string>
+    <string name="storage_denied">Access storage permission denied</string>
+
+    <string name="update_resources_failed">Không thể cập nhật tài nguyên!</string>
+    <string name="no_internet">Bạn cần kết nối mạng để tải về tài nguyên!</string>
+    <string name="no_json">Đã có lỗi xảy ra trong quá trình hiển thị view</string>
+</resources>
