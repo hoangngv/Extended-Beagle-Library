@@ -24,7 +24,7 @@
             android:visibility="gone"
             android:layout_gravity="center"
             style="@style/AVLoadingIndicatorView"
-            app:indicatorColor="@color/colorPrimaryBlue"
+            app:indicatorColor="#3596EC"
             app:indicatorName="BallClipRotateIndicator"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
