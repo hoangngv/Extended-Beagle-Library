@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest
-    package="com.vt.extendedbeaglelib">
+<manifest package="com.vt.extendedbeaglelib"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application android:name=".base.MyApplication" >
+
+    </application>
 
 </manifest>
