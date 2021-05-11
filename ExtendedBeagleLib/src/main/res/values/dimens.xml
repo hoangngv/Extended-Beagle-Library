@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="size_text_small">@dimen/_10sdp</dimen>
+    <dimen name="size_text_normal">@dimen/_12sdp</dimen>
+    <dimen name="size_text_normal_big">@dimen/_14sdp</dimen>
+    <dimen name="size_text_header_1">@dimen/_24sdp</dimen>
+    <dimen name="size_text_header_2">@dimen/_22sdp</dimen>
+    <dimen name="size_text_header_3">@dimen/_20sdp</dimen>
+    <dimen name="size_text_header_4">@dimen/_18sdp</dimen>
+    <dimen name="size_text_header_5">@dimen/_16sdp</dimen>
+
+    <dimen name="size_margin_large">@dimen/_30sdp</dimen>
+    <dimen name="size_margin_normal">@dimen/_16sdp</dimen>
+    <dimen name="size_padding_edittext">@dimen/_6sdp</dimen>
+
+    <dimen name="size_icon_tiny">@dimen/_16sdp</dimen>
+    <dimen name="size_icon_normal">@dimen/_22sdp</dimen>
+    <dimen name="size_icon_big">@dimen/_30sdp</dimen>
+
+    <dimen name="size_button_normal">@dimen/_35sdp</dimen>
+</resources>

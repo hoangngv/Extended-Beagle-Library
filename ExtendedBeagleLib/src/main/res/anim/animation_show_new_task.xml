@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shareInterpolator="false"
+    android:fillAfter="true">
+    <translate
+        android:fromXDelta="0%" android:toXDelta="0%"
+        android:fromYDelta="-150%" android:toYDelta="0%"
+        android:duration="@integer/duration_animation_change_fragment" />
+
+    <alpha
+        android:duration="@integer/duration_animation_change_fragment"
+        android:fromAlpha="0.0"
+        android:toAlpha="1.0"/>
+</set>
