@@ -1,5 +1,5 @@
 # Extended-Beagle-Library
-[![Release](https://img.shields.io/github/release/PhilJay/MPAndroidChart.svg?style=flat)](https://jitpack.io/#hoangnv11/Extended-Beagle-Library)
+[![Release](https://jitpack.io/v/hoangnv11/Extended-Beagle-Library.svg)](https://jitpack.io/#hoangnv11/Extended-Beagle-Library)
 
 :zap: Server-driven UI for Android :zap:
 
