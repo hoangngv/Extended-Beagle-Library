@@ -5,9 +5,9 @@ plugins {
     id 'kotlin-android-extensions'
 }
 
-apply plugin: 'com.github.dcendents.android-maven'
-
-group = 'com.github.hoangnv11'
+//apply plugin: 'com.github.dcendents.android-maven'
+//
+//group = 'com.github.hoangnv11'
 
 android {
     compileSdkVersion 30
