@@ -19,12 +19,15 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
-        <ProgressBar
-            android:id="@+id/progress_bar"
-            android:layout_width="42dp"
-            android:layout_height="42dp"
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/loading_indicator"
+            android:visibility="gone"
             android:layout_gravity="center"
-            android:visibility="gone"/>
+            style="@style/AVLoadingIndicatorView"
+            app:indicatorColor="@color/color_primary_nbox"
+            app:indicatorName="BallClipRotateIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 
     </FrameLayout>
 

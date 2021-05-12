@@ -21,6 +21,7 @@ import com.vt.extendedbeaglelib.common.PickLocalPhotoListener
 import com.vt.extendedbeaglelib.utils.bus.SingleBus
 import com.vt.extendedbeaglelib.utils.bus.SingleBusKey
 import com.vt.extendedbeaglelib.utils.extensions.toast
+import com.wang.avi.AVLoadingIndicatorView
 import kotlinx.android.synthetic.main.activity_beagle.*
 import kotlinx.coroutines.Job
 import java.io.File
@@ -73,11 +74,11 @@ class AppBeagleActivity : BeagleActivity() {
     override fun onServerDrivenContainerStateChanged(state: ServerDrivenState) {
         when (state) {
             is ServerDrivenState.Started -> {
-                progress_bar.visibility = View.VISIBLE
+                (loading_indicator as AVLoadingIndicatorView).visibility = View.VISIBLE
             }
 
             is ServerDrivenState.Finished -> {
-                progress_bar.visibility = View.GONE
+                (loading_indicator as AVLoadingIndicatorView).visibility = View.GONE
             }
             else -> Log.d("dLog", "State -> $state")
         }

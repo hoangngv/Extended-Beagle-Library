@@ -9,7 +9,7 @@
         android:layout_gravity="center"
         android:scaleType="center"
         android:padding="@dimen/_4sdp"
-        android:backgroundTint="@color/colorPrimaryBlue"
+        android:backgroundTint="@color/color_primary_nbox"
         android:id="@+id/floatingActionButton"
         app:fabSize="normal"
         android:layout_width="match_parent"

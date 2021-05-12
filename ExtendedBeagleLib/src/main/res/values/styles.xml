@@ -172,12 +172,12 @@
 
     <style name="style_text_logo_big">
         <item name="android:textSize">38sp</item>
-        <item name="android:textColor">@color/colorPrimaryBlue</item>
+        <item name="android:textColor">@color/color_primary_nbox</item>
     </style>
 
     <style name="style_text_tiny_blue">
         <item name="android:textSize">12sp</item>
-        <item name="android:textColor">@color/colorPrimaryBlue</item>
+        <item name="android:textColor">@color/color_primary_nbox</item>
         <item name="android:gravity">center</item>
     </style>
 
