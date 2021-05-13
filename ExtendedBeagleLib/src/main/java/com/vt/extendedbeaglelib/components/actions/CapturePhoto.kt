@@ -8,7 +8,7 @@ import br.com.zup.beagle.android.action.Action
 import br.com.zup.beagle.android.utils.handleEvent
 import br.com.zup.beagle.android.widget.RootView
 import br.com.zup.beagle.annotation.RegisterAction
-import com.vt.extendedbeaglelib.common.CapturePhotoListener
+import com.vt.extendedbeaglelib.common.callback.CapturePhotoListener
 import com.vt.extendedbeaglelib.common.Constants.PERMISSION_CAMERA
 import com.vt.extendedbeaglelib.ui.AppBeagleActivity
 import com.vt.extendedbeaglelib.utils.bus.SingleBus

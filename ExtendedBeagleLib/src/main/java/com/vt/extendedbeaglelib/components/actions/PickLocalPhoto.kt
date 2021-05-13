@@ -9,7 +9,7 @@ import br.com.zup.beagle.android.utils.handleEvent
 import br.com.zup.beagle.android.widget.RootView
 import br.com.zup.beagle.annotation.RegisterAction
 import com.vt.extendedbeaglelib.common.Constants.PERMISSION_PHOTO
-import com.vt.extendedbeaglelib.common.PickLocalPhotoListener
+import com.vt.extendedbeaglelib.common.callback.PickLocalPhotoListener
 import com.vt.extendedbeaglelib.ui.AppBeagleActivity
 import com.vt.extendedbeaglelib.utils.bus.SingleBus
 import com.vt.extendedbeaglelib.utils.bus.SingleBusKey

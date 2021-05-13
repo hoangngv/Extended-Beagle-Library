@@ -1,4 +1,4 @@
-package com.vt.extendedbeaglelib.common
+package com.vt.extendedbeaglelib.common.callback
 
 import android.net.Uri
 

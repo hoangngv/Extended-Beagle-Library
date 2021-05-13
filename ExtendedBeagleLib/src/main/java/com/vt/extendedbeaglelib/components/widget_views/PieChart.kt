@@ -7,7 +7,7 @@ import android.widget.LinearLayout
 import android.widget.Toast
 import com.github.mikephil.charting.animation.Easing
 import com.github.mikephil.charting.data.PieEntry
-import com.vt.beagle_ui.data.model.PieChartSlice
+import com.vt.extendedbeaglelib.data.model.PieChartSlice
 import com.vt.extendedbeaglelib.R
 import com.vt.extendedbeaglelib.utils.extensions.updateData
 import kotlinx.android.synthetic.main.layout_pie_chart.view.*
@@ -21,16 +21,16 @@ class PieChart(context: Context) : LinearLayout(context){
     }
 
     fun setupPieChart(
-        dataset: List<PieChartSlice>,
-        valueTextColor: String,
-        valueTextSize: Float,
-        sliceSpace: Float,
-        isHoleNeeded: Boolean,
-        holeRadius: Float,
-        holeColor: String,
-        holeText: String,
-        holeTextColor: String,
-        holeTextSize: Float
+            dataset: List<PieChartSlice>,
+            valueTextColor: String,
+            valueTextSize: Float,
+            sliceSpace: Float,
+            isHoleNeeded: Boolean,
+            holeRadius: Float,
+            holeColor: String,
+            holeText: String,
+            holeTextColor: String,
+            holeTextSize: Float
     ) {
         if (dataset.isNotEmpty()) {
             val listData = mutableListOf<PieEntry>()

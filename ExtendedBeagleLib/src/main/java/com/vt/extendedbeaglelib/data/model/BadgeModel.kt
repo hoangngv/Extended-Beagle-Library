@@ -1,4 +1,4 @@
-package com.vt.beagle_ui.data.model
+package com.vt.extendedbeaglelib.data.model
 
 data class BadgeModel(
     val number: Int,

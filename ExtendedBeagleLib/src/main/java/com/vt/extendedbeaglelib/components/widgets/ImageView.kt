@@ -11,7 +11,7 @@ import br.com.zup.beagle.android.utils.handleEvent
 import br.com.zup.beagle.android.widget.RootView
 import br.com.zup.beagle.android.widget.WidgetView
 import br.com.zup.beagle.annotation.RegisterWidget
-import com.vt.extendedbeaglelib.common.ImageSetListener
+import com.vt.extendedbeaglelib.common.callback.ImageSetListener
 import com.vt.extendedbeaglelib.components.widget_views.CustomImageView
 import java.io.ByteArrayOutputStream
 

@@ -14,10 +14,10 @@ import br.com.zup.beagle.android.annotation.RegisterController
 import br.com.zup.beagle.android.view.BeagleActivity
 import br.com.zup.beagle.android.view.ServerDrivenState
 import com.vt.extendedbeaglelib.R
-import com.vt.extendedbeaglelib.common.CapturePhotoListener
+import com.vt.extendedbeaglelib.common.callback.CapturePhotoListener
 import com.vt.extendedbeaglelib.common.Constants.PERMISSION_CAMERA
 import com.vt.extendedbeaglelib.common.Constants.PERMISSION_PHOTO
-import com.vt.extendedbeaglelib.common.PickLocalPhotoListener
+import com.vt.extendedbeaglelib.common.callback.PickLocalPhotoListener
 import com.vt.extendedbeaglelib.utils.bus.SingleBus
 import com.vt.extendedbeaglelib.utils.bus.SingleBusKey
 import com.vt.extendedbeaglelib.utils.extensions.toast

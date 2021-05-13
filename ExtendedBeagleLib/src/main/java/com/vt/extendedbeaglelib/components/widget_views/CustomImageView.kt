@@ -8,7 +8,7 @@ import android.view.View
 import android.widget.LinearLayout
 import com.vt.extendedbeaglelib.R
 import com.vt.extendedbeaglelib.ui.AppBeagleActivity
-import com.vt.extendedbeaglelib.common.ImageSetListener
+import com.vt.extendedbeaglelib.common.callback.ImageSetListener
 import com.vt.extendedbeaglelib.utils.bus.SingleBus
 import com.vt.extendedbeaglelib.utils.bus.SingleBusKey
 import com.vt.extendedbeaglelib.utils.extensions.loadGlide

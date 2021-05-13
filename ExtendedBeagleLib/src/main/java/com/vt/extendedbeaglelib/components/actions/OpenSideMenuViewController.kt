@@ -6,7 +6,7 @@ import br.com.zup.beagle.android.action.Action
 import br.com.zup.beagle.android.widget.RootView
 import br.com.zup.beagle.annotation.RegisterAction
 import com.vt.extendedbeaglelib.R
-import com.vt.extendedbeaglelib.common.Gravity
+import com.vt.extendedbeaglelib.common.enum_class.Gravity
 import com.vt.extendedbeaglelib.ui.FragmentDrawer
 
 @RegisterAction

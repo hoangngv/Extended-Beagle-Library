@@ -17,9 +17,10 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.target.SimpleTarget
 import com.bumptech.glide.request.transition.Transition
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.vt.beagle_ui.data.model.BadgeModel
-import com.vt.beagle_ui.data.model.TabInfo
 import com.vt.extendedbeaglelib.R
+import com.vt.extendedbeaglelib.common.enum_class.TabInfoType
+import com.vt.extendedbeaglelib.data.model.BadgeModel
+import com.vt.extendedbeaglelib.data.model.TabInfo
 import com.vt.extendedbeaglelib.ui.BaseFragment
 import com.vt.extendedbeaglelib.utils.bus.SingleBus
 import com.vt.extendedbeaglelib.utils.bus.SingleBusKey
@@ -53,10 +54,10 @@ class BottomNavigationView(context: Context) : LinearLayout(context) {
     }
 
     fun setupMenu(
-        tabItems: List<TabInfo>,
-        selectedColor: String? = "#3596EC",
-        unselectedColor: String? = "#788793",
-        activity: AppCompatActivity
+            tabItems: List<TabInfo>,
+            selectedColor: String? = "#3596EC",
+            unselectedColor: String? = "#788793",
+            activity: AppCompatActivity
     ) {
         if (tabItems.isNotEmpty()) {
             val fragmentManager: FragmentManager = activity.supportFragmentManager
@@ -78,8 +79,8 @@ class BottomNavigationView(context: Context) : LinearLayout(context) {
                 .load(tabItems[i].remoteIconUrl)
                 .into(object : SimpleTarget<Drawable?>() {
                     override fun onResourceReady(
-                        resource: Drawable,
-                        @Nullable transition: Transition<in Drawable?>?
+                            resource: Drawable,
+                            @Nullable transition: Transition<in Drawable?>?
                     ) {
                         if (i == 0) {
                             menu.findItem(R.id.default_page).apply {
@@ -95,7 +96,7 @@ class BottomNavigationView(context: Context) : LinearLayout(context) {
                                 setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS)
                             }
 
-                            if (i == tabItems.size-1) {
+                            if (i == tabItems.size - 1) {
                                 notificationMenuItemId = menuItemId
                             }
                         }
@@ -105,25 +106,36 @@ class BottomNavigationView(context: Context) : LinearLayout(context) {
     }
 
     private fun generateFragment(
-        tabItems: List<TabInfo>,
-        fragmentManager: FragmentManager)
+            tabItems: List<TabInfo>,
+            fragmentManager: FragmentManager)
     {
         val fragmentTransaction = fragmentManager.beginTransaction()
 
         for (i in tabItems.indices) {
-            val homeFragmentInstance = BaseFragment.newInstance(tabItems[i].api) // pass the destination
+            if (tabItems[i].type == TabInfoType.BEAGLE) {
+                tabItems[i].api?.let {
+                    val endpoint = "/beagle$it"
+                    val homeFragmentInstance = BaseFragment.newInstance(endpoint)
 
-            fragmentTransaction.add(
-                R.id.server_driven_container,
-                homeFragmentInstance,
-                tabItems[i].title
-            )
+                    fragmentTransaction.add(
+                            R.id.server_driven_container,
+                            homeFragmentInstance,
+                            tabItems[i].title
+                    )
 
-            if (i == 0) {
-                fragmentTransaction.show(homeFragmentInstance)
-                tempFragment = homeFragmentInstance
-            } else {
-                fragmentTransaction.hide(homeFragmentInstance)
+                    if (i == 0) {
+                        fragmentTransaction.show(homeFragmentInstance)
+                        tempFragment = homeFragmentInstance
+                    } else {
+                        fragmentTransaction.hide(homeFragmentInstance)
+                    }
+                }
+            } else if (tabItems[i].type == TabInfoType.NATIVE) {
+                tabItems[i].className?.let {
+                    Log.d("dLog", "Native fragment -> $it")
+//                    val nativeFragmentClass = Class.forName(it)
+//                    val nativeFragmentInstance = nativeFragmentClass.newInstance()
+                }
             }
         }
 
@@ -131,8 +143,8 @@ class BottomNavigationView(context: Context) : LinearLayout(context) {
     }
 
     private fun setupListener(
-        tabItems: List<TabInfo>,
-        fragmentManager: FragmentManager)
+            tabItems: List<TabInfo>,
+            fragmentManager: FragmentManager)
     {
         navigationBar.setOnNavigationItemSelectedListener { item ->
             val fragmentTransaction = fragmentManager.beginTransaction()
@@ -156,17 +168,17 @@ class BottomNavigationView(context: Context) : LinearLayout(context) {
     }
 
     private fun setNavigationTextColor(
-        navigationView: BottomNavigationView,
-        selectedColor: String? = "#3596EC",
-        unselectedColor: String? = "#788793"
+            navigationView: BottomNavigationView,
+            selectedColor: String? = "#3596EC",
+            unselectedColor: String? = "#788793"
     ) {
         val colors = intArrayOf(
-            Color.parseColor(unselectedColor),
-            Color.parseColor(selectedColor)
+                Color.parseColor(unselectedColor),
+                Color.parseColor(selectedColor)
         )
         val states = arrayOf(
-            intArrayOf(android.R.attr.state_enabled, -android.R.attr.state_checked),
-            intArrayOf(android.R.attr.state_enabled, android.R.attr.state_checked)
+                intArrayOf(android.R.attr.state_enabled, -android.R.attr.state_checked),
+                intArrayOf(android.R.attr.state_enabled, android.R.attr.state_checked)
         )
 
         navigationView.itemTextColor = ColorStateList(states, colors)

@@ -7,20 +7,20 @@ import br.com.zup.beagle.android.widget.RootView
 import br.com.zup.beagle.android.widget.WidgetView
 import br.com.zup.beagle.annotation.RegisterWidget
 import br.com.zup.beagle.widget.core.TextAlignment
-import com.vt.beagle_ui.common.FontStyle
+import com.vt.extendedbeaglelib.common.enum_class.FontStyle
 import com.vt.extendedbeaglelib.components.widget_views.TextView
 
 @RegisterWidget
 class Label(
-    val text: Bind<String>?,
-    val textColor: Bind<String>?,
-    val cornerRadius: Double? = null,
-    val backgroundColor: String? = null,
-    val fontSize: Double = 17.0,
-    val fontName: String? = null,
-    val fontStyle: FontStyle = FontStyle.NORMAL,
-    val numberOfLines: Int = 1,
-    val textAlignment: TextAlignment = TextAlignment.LEFT
+        val text: Bind<String>?,
+        val textColor: Bind<String>?,
+        val cornerRadius: Double? = null,
+        val backgroundColor: String? = null,
+        val fontSize: Double = 17.0,
+        val fontName: String? = null,
+        val fontStyle: FontStyle = FontStyle.NORMAL,
+        val numberOfLines: Int = 1,
+        val textAlignment: TextAlignment = TextAlignment.LEFT
 ) : WidgetView() {
     override fun buildView(rootView: RootView): View {
         return TextView(rootView.getContext()).apply {

@@ -1,4 +1,4 @@
-package com.vt.beagle_ui.common
+package com.vt.extendedbeaglelib.common.enum_class
 
 enum class FontStyle {
     SEMI_BOLD,

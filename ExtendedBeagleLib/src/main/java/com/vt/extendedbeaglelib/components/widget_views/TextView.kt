@@ -10,7 +10,7 @@ import android.view.Gravity
 import android.view.View
 import android.widget.LinearLayout
 import br.com.zup.beagle.widget.core.TextAlignment
-import com.vt.beagle_ui.common.FontStyle
+import com.vt.extendedbeaglelib.common.enum_class.FontStyle
 import com.vt.extendedbeaglelib.R
 import kotlinx.android.synthetic.main.layout_custom_text_view.view.*
 
@@ -23,15 +23,15 @@ class TextView constructor(
     }
 
     fun setText(
-        text: String? = "",
-        textColor: String = "#000000",
-        cornerRadius: Double? = null,
-        backgroundColor: String? = null,
-        fontSize: Double = 17.0,
-        fontName: String? = null,
-        fontStyle: FontStyle = FontStyle.NORMAL,
-        numberOfLines: Int = 1,
-        textAlignment: TextAlignment = TextAlignment.LEFT
+            text: String? = "",
+            textColor: String = "#000000",
+            cornerRadius: Double? = null,
+            backgroundColor: String? = null,
+            fontSize: Double = 17.0,
+            fontName: String? = null,
+            fontStyle: FontStyle = FontStyle.NORMAL,
+            numberOfLines: Int = 1,
+            textAlignment: TextAlignment = TextAlignment.LEFT
     ) {
         if (text.equals("")) {
             parentBackground.visibility = View.GONE

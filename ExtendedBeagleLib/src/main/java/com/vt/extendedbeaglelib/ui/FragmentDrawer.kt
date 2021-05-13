@@ -16,7 +16,7 @@ import br.com.zup.beagle.android.view.ScreenRequest
 import br.com.zup.beagle.android.view.ServerDrivenState
 import br.com.zup.beagle.android.view.custom.OnServerStateChanged
 import com.vt.extendedbeaglelib.R
-import com.vt.extendedbeaglelib.common.Gravity
+import com.vt.extendedbeaglelib.common.enum_class.Gravity
 import kotlinx.android.synthetic.main.fragment_drawer_navigation.*
 
 class FragmentDrawer : Fragment() {
